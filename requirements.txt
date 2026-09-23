@@ -1,0 +1,3 @@
+# The simulator only needs YAML parsing. FFmpeg and MediaMTX are standalone
+# Windows executables; install them as described in README.md.
+PyYAML>=6.0

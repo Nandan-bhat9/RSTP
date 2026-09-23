@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Runtime generated configs
+.runtime/
+
+# Large binaries (downloaded via scripts/download_mediamtx.bat)
+mediamtx/mediamtx.exe
+ffmpeg.exe

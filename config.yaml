@@ -1,0 +1,52 @@
+# KAVACH RTSP CCTV Simulator configuration.
+# Set advertise_host to this laptop's LAN IPv4 address if automatic discovery
+# chooses the wrong adapter (for example, when a VPN is active).
+server:
+  host: 0.0.0.0
+  port: 8554
+  advertise_host: auto
+  transport: tcp
+
+tools:
+  # Leave blank to use PATH. Relative paths are resolved from rtsp_simulator/.
+  mediamtx_path: mediamtx/mediamtx.exe
+  ffmpeg_path: ffmpeg
+
+publisher:
+  # "copy" avoids re-encoding. Use "libx264" only for a source codec that
+  # KAVACH/OpenCV cannot decode reliably.
+  video_codec: copy
+  preset: veryfast
+  crf: 23
+  log_level: warning
+
+cameras:
+  - id: camera_1
+    name: Entrance Camera
+    source: videos/camera1.mp4
+    stream_path: camera1
+    enabled: true
+
+  - id: camera_2
+    name: Parking Camera
+    source: videos/camera2.mp4
+    stream_path: camera2
+    enabled: true
+
+  - id: camera_3
+    name: Building Camera
+    source: C:\Users\Lenovo\Videos\KAVACH testing Data\RDT_20260713_101445.mp4
+    stream_path: camera3
+    enabled: true
+
+  - id: camera_4
+    name: Hall Camera
+    source: C:\Users\Lenovo\Documents\DATASET KAVACH\rapidsave.com_fight_between_professor_and_college_principal-37ku9htrplc81.mp4
+    stream_path: camera4
+    enabled: true
+
+  - id: camera_5
+    name: Gate Camera
+    source: videos/camera5.mp4
+    stream_path: camera5
+    enabled: true
